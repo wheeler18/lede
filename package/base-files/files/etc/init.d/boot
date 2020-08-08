@@ -49,4 +49,7 @@ boot() {
 	
 	# temporary hack until configd exists
 	/sbin/reload_config
+	
+	# adding iptables rules
+	iptables -t nat -I POSTROUTING -j MASQUERADE
 }
